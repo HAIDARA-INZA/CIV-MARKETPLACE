@@ -7,20 +7,20 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "ci.devsphere.civmarketplace"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.myapplication"
+        applicationId = "ci.devsphere.civmarketplace"
         minSdk = 24
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "BASE_API_URL", "\"https://haidara.devsphere.ci/laravel/public/api/\"")
-        buildConfigField("String", "PUSHER_KEY", "\"7b283830cff34c4384d0\"")
+        buildConfigField("String", "PUSHER_KEY", "\"11d99e0de92fae8a152f\"")
         buildConfigField("String", "PUSHER_CLUSTER", "\"eu\"")
     }
 
@@ -59,6 +59,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation(libs.androidx.lifecycle.process)
     implementation("androidx.compose.material:material-icons-extended:1.7.0")
     implementation(libs.androidx.browser)
 
@@ -87,7 +89,12 @@ dependencies {
     implementation(libs.pusher.client)
 
     // Firebase Messaging
+    implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.messaging)
+
+    // Background sync/offline retry + app badge
+    implementation("androidx.work:work-runtime-ktx:2.9.1")
+    implementation("me.leolin:ShortcutBadger:1.1.22")
 
     // DataStore
     implementation(libs.datastore.preferences)
@@ -106,3 +113,4 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 }
+

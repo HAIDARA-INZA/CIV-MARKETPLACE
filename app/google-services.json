@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:578964143104:android:af4698342d754f2d7c2ce5",
+        "mobilesdk_app_id": "1:578964143104:android:5b747063338ffaac7c2ce5",
         "android_client_info": {
-          "package_name": "com.example.myapplication"
+          "package_name": "ci.devsphere.civmarketplace"
         }
       },
       "oauth_client": [],

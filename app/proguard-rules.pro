@@ -1,4 +1,4 @@
-# 🛡️ DEVSphere Marketplace - ProGuard/R8 Security Rules
+﻿# ðŸ›¡ï¸ DEVSphere Marketplace - ProGuard/R8 Security Rules
 
 # --- RETROFIT & OKHTTP ---
 -keepattributes Signature, InnerClasses, AnnotationDefault
@@ -8,8 +8,8 @@
 -dontwarn org.conscrypt.**
 
 # --- GSON (API Data Models) ---
--keep class com.example.myapplication.data.model.** { *; }
--keep class com.example.myapplication.data.remote.** { *; } # <-- AJOUTÉ : Protège aussi les modèles de requêtes
+-keep class ci.devsphere.civmarketplace.data.model.** { *; }
+-keep class ci.devsphere.civmarketplace.data.remote.** { *; } # <-- AJOUTÃ‰ : ProtÃ¨ge aussi les modÃ¨les de requÃªtes
 -keepattributes EnclosingMethod, Signature, *Annotation*
 
 # --- HILT / DAGGER ---
@@ -30,3 +30,4 @@
 -keep public class * extends android.app.Application
 -keep public class * extends android.app.Activity
 -keep public class * extends android.app.Service
+
